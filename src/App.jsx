@@ -7,6 +7,7 @@ import HeroSection from "../components/herosection/herosection";
 import Footer from "../components/footer/footer";
 import PdfSlideshow from "../components/slideshow/slideshow";
 import ComingSoon from "../components/comingsoon/comingsoon";
+import About from "../components/about/About";
 
 const App = () => {
   return (
@@ -29,7 +30,7 @@ const App = () => {
             />
 
             {/* Other Pages */}
-            <Route path="/about" element={<ComingSoon />} />
+            <Route path="/about" element={<About />} />
             <Route path="/work" element={<ComingSoon />} />
             <Route path="/stories" element={<ComingSoon />} />
             <Route path="/partners" element={<ComingSoon />} />
