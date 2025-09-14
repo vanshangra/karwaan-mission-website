@@ -15,8 +15,8 @@ const About = () => {
   }, [location.search]);
 
   const sections = [
-    { id: "our-story", label: "Our Story", bgColor: "bg-red-600" },
-    { id: "our-vision", label: "Our Vision", bgColor: "bg-blue-600" },
+    { id: "our-story", label: "Our Story", bgColor: "bg-green-600" },
+    { id: "our-vision", label: "Our Vision", bgColor: "bg-green-600" },
     { id: "our-people", label: "Our People", bgColor: "bg-green-600" },
   ];
 
