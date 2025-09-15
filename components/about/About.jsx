@@ -53,15 +53,16 @@ const About = () => {
       case "our-vision":
         return (
           <div className="space-y-8">
-            <div className="relative">
+            {/* Full-bleed hero for Vision (match our-people behavior) */}
+            <div className="relative w-full">
               <img
                 src="/images/2.jpg"
                 alt="Our Vision"
-                className="w-full h-96 object-cover rounded-lg shadow-lg"
+                className={`w-full h-96 object-cover ${activeSection === 'our-vision' ? '' : 'rounded-lg shadow-lg'}`}
               />
-              <div className="absolute inset-0 bg-black bg-opacity-30 rounded-lg"></div>
+              <div className={`absolute inset-0 bg-black bg-opacity-30 ${activeSection === 'our-vision' ? '' : 'rounded-lg'}`}></div>
             </div>
-            
+
             {/* Vision Section */}
             <div className="bg-white rounded-lg p-8 shadow-sm">
               <div className="flex items-center mb-6">
@@ -98,7 +99,8 @@ const About = () => {
             {/* Strategic Focus Areas */}
             <div className="bg-gray-50 rounded-lg p-8">
               <h3 className="text-3xl font-bold text-center text-gray-900 mb-8">Strategic Focus Areas 2025 - 2030</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {/* Show two focus cards per row on md+ screens */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
                 
                 {/* Focus Area 1 */}
                 <div className="text-center">
@@ -167,6 +169,23 @@ const About = () => {
                     ULBs, RRBs, SHGs, and citizen participation as per SBM-U, SBM-R and SWM Rules 2016.
                   </p>
                 </div>
+              </div>
+            </div>
+
+            {/* Professions UI - placeholders for images that user will add later */}
+            <div className="bg-white rounded-lg p-8 shadow-sm">
+              <h4 className="text-2xl font-bold text-gray-900 mb-6">Professions</h4>
+              <p className="text-sm text-gray-600 mb-4">Add images for professions below. Placeholders are shown; replace `src` with actual images when ready.</p>
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+                {Array.from({ length: 8 }).map((_, idx) => (
+                  <div key={idx} className="text-center">
+                    <div className="bg-gray-50 rounded-lg overflow-hidden h-36 flex items-center justify-center mb-3">
+                      <img src={`/images/people/placeholder-${idx + 1}.png`} alt={`Profession ${idx + 1}`} className="object-cover h-full w-full opacity-60" />
+                    </div>
+                    <div className="text-sm font-medium text-gray-800">Profession {idx + 1}</div>
+                    <div className="text-xs text-gray-500">Role / short title</div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -761,8 +780,9 @@ const About = () => {
 
       {/* Content Section */}
       <div className="container mx-auto px-4 py-12">
-        <div className={`${activeSection === 'our-people' ? 'max-w-full' : 'max-w-4xl'} mx-auto`}>
-          <div className={`${activeSection === 'our-people' ? 'bg-transparent' : 'bg-white rounded-lg shadow-sm'} ${activeSection === 'our-people' ? 'p-0' : 'p-8'}`}>
+        {/* Keep layout decision centralized: our-people and our-vision will render full-width hero */}
+        <div className={`${activeSection === 'our-people' || activeSection === 'our-vision' ? 'max-w-full' : 'max-w-4xl'} mx-auto`}>
+          <div className={`${activeSection === 'our-people' || activeSection === 'our-vision' ? 'bg-transparent' : 'bg-white rounded-lg shadow-sm'} ${activeSection === 'our-people' || activeSection === 'our-vision' ? 'p-0' : 'p-8'}`}>
             {renderContent()}
           </div>
         </div>
