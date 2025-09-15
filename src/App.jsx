@@ -7,6 +7,8 @@ import HeroSection from "../components/herosection/herosection";
 import Footer from "../components/footer/footer";
 import PdfSlideshow from "../components/slideshow/slideshow";
 import ComingSoon from "../components/comingsoon/comingsoon";
+import OurWork  from "../components/ourwork/ourwork";
+import ExploreMorePage from "../components/explore/explore";  
 
 const App = () => {
   return (
@@ -30,11 +32,12 @@ const App = () => {
 
             {/* Other Pages */}
             <Route path="/about" element={<ComingSoon />} />
-            <Route path="/work" element={<ComingSoon />} />
+            <Route path="/work" element={<OurWork />} />
             <Route path="/stories" element={<ComingSoon />} />
             <Route path="/partners" element={<ComingSoon />} />
             <Route path="/contact" element={<ComingSoon />} />
             <Route path="/donate" element={<ComingSoon />} />
+            <Route path="/explore-more" element={<ExploreMorePage />} />
           </Routes>
         </main>
         <Footer />
