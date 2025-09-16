@@ -9,6 +9,7 @@ import PdfSlideshow from "../components/slideshow/slideshow";
 import ComingSoon from "../components/comingsoon/comingsoon";
 import OurWork  from "../components/ourwork/ourwork";
 import ExploreMorePage from "../components/explore/explore";  
+import Contact from "../components/contact/contact";
 
 const App = () => {
   return (
@@ -35,7 +36,7 @@ const App = () => {
             <Route path="/work" element={<OurWork />} />
             <Route path="/stories" element={<ComingSoon />} />
             <Route path="/partners" element={<ComingSoon />} />
-            <Route path="/contact" element={<ComingSoon />} />
+            <Route path="/contact" element={<Contact />} />
             <Route path="/donate" element={<ComingSoon />} />
             <Route path="/explore-more" element={<ExploreMorePage />} />
           </Routes>
