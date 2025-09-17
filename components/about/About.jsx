@@ -24,168 +24,274 @@ const About = () => {
     switch (activeSection) {
       case "our-story":
         return (
-          <div className="space-y-6">
-            <div className="relative">
+          <div className="w-full space-y-12">
+            {/* Full-bleed hero to match our-vision & our-people */}
+            <div className="relative w-full">
               <img
                 src="/images/1.jpg"
                 alt="Our Story"
-                className="w-full h-96 object-cover rounded-lg shadow-lg"
+                className="w-full h-96 object-cover"
               />
-              <div className="absolute inset-0 bg-black bg-opacity-30 rounded-lg"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-emerald-900/60 to-green-600/20"></div>
+              <div className="absolute inset-0 flex items-center justify-start">
+                <div className="w-full px-6 lg:px-16">
+                  <div className="max-w-5xl text-white text-left">
+                    <h1 className="text-5xl md:text-6xl font-bold leading-tight">Our Story</h1>
+                    <p className="mt-4 text-lg md:text-xl max-w-3xl opacity-95">Started with a handful of committed neighbours and volunteers, today we are a large, diverse team — united by the belief that small actions create lasting change.</p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="text-lg leading-relaxed text-gray-700">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Story</h3>
-              <p className="mb-4">
-                [Add your organization's story here - how Karwaan Mission began, 
-                the inspiration behind it, and the journey so far.]
-              </p>
-              <p className="mb-4">
-                [Describe key milestones, challenges overcome, and growth moments 
-                that shaped your mission.]
-              </p>
-              <p>
-                [Share what drives your team and the impact you've made in the community.]
-              </p>
+
+            {/* Constrained content to retain master-level UI rhythm */}
+            <div className="container mx-auto px-4">
+              <div className="max-w-7xl mx-auto space-y-10">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+                  <div className="lg:col-span-2 bg-white rounded-2xl p-10 shadow-lg">
+                    <h3 className="text-3xl font-extrabold text-gray-900 mb-4">From Few to Many</h3>
+                    <p className="text-gray-700 leading-relaxed mb-4">What began as a community clean-up led by a small group quickly found resonance. Through dedication, transparent operations, and measurable outcomes, more volunteers, partners, and supporters joined — growing our reach across cities and neighbourhoods.</p>
+                    <p className="text-gray-700 leading-relaxed mb-6">Our evolution is rooted in listening to communities, designing low-friction programs, and creating livelihood pathways. Today, we partner with schools, local bodies, corporates and civic groups to scale interventions while retaining a human-centred approach.</p>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+                      <div className="p-6 rounded-xl bg-emerald-50">
+                        <h5 className="font-semibold text-gray-900">People-first</h5>
+                        <p className="text-sm text-gray-600 mt-2">We prioritise dignity, livelihoods and local leadership at every step.</p>
+                      </div>
+                      <div className="p-6 rounded-xl bg-emerald-50">
+                        <h5 className="font-semibold text-gray-900">Evidence-driven</h5>
+                        <p className="text-sm text-gray-600 mt-2">Programs shaped by data, field feedback and continuous improvement.</p>
+                      </div>
+                    </div>
+
+                    <div className="mb-8">
+                      <h4 className="text-2xl font-bold text-gray-900 mb-4">Journey Timeline</h4>
+                      <div className="timeline">
+                        <div className="timeline-item">
+                          <div className="timeline-dot"></div>
+                          <div className="timeline-content">
+                            <div className="font-bold text-emerald-700">2018</div>
+                            <div className="text-sm text-gray-600">Founded by neighbours; first clean-up and awareness events.</div>
+                          </div>
+                        </div>
+                        <div className="timeline-item">
+                          <div className="timeline-dot"></div>
+                          <div className="timeline-content">
+                            <div className="font-bold text-emerald-700">2020</div>
+                            <div className="text-sm text-gray-600">Expanded to schools, launched behaviour campaigns and volunteer training.</div>
+                          </div>
+                        </div>
+                        <div className="timeline-item">
+                          <div className="timeline-dot"></div>
+                          <div className="timeline-content">
+                            <div className="font-bold text-emerald-700">2023</div>
+                            <div className="text-sm text-gray-600">Started RRR centres and piloted livelihood-linked models.</div>
+                          </div>
+                        </div>
+                        <div className="timeline-item">
+                          <div className="timeline-dot"></div>
+                          <div className="timeline-content">
+                            <div className="font-bold text-emerald-700">2024 - Present</div>
+                            <div className="text-sm text-gray-600">Team scaled significantly; formal partnerships and regional pilots underway.</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="flex items-center gap-4">
+                      <button className="bg-emerald-700 text-white px-6 py-3 rounded-full font-semibold hover:bg-emerald-800 transition">See Our Impact</button>
+                      <a href="#our-people" className="text-emerald-700 font-medium underline">Meet the Team</a>
+                    </div>
+                  </div>
+
+                  <aside className="bg-white rounded-2xl p-6 shadow-lg">
+                    <h5 className="text-lg font-bold text-gray-900 mb-4">By the numbers</h5>
+                    <div className="space-y-4">
+                      <div className="flex items-center justify-between">
+                        <div>
+                          <div className="text-2xl font-extrabold text-emerald-700">25+</div>
+                          <div className="text-sm text-gray-600">Core team members</div>
+                        </div>
+                        <div>
+                          <div className="text-2xl font-extrabold text-emerald-700">1000+</div>
+                          <div className="text-sm text-gray-600">Volunteers & community members</div>
+                        </div>
+                      </div>
+
+                      <div className="p-4 rounded-lg bg-emerald-50">
+                        <div className="font-semibold text-gray-900">Current focus</div>
+                        <div className="text-sm text-gray-600">Scaling RRR centres, school partnerships, and youth leadership programs.</div>
+                      </div>
+                    </div>
+                  </aside>
+                </div>
+              </div>
             </div>
           </div>
         );
 
       case "our-vision":
         return (
-          <div className="space-y-8">
-            {/* Full-bleed hero for Vision (match our-people behavior) */}
+          <div className="w-full space-y-12">
+            {/* Full-bleed hero (same width behavior as our-people) */}
             <div className="relative w-full">
               <img
-                src="/images/2.jpg"
+                src="/images/vision/v-image.jpg"
                 alt="Our Vision"
-                className={`w-full h-96 object-cover ${activeSection === 'our-vision' ? '' : 'rounded-lg shadow-lg'}`}
+                className="w-full h-96 object-cover"
               />
-              <div className={`absolute inset-0 bg-black bg-opacity-30 ${activeSection === 'our-vision' ? '' : 'rounded-lg'}`}></div>
-            </div>
-
-            {/* Vision Section */}
-            <div className="bg-white rounded-lg p-8 shadow-sm">
-              <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
-                  <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                  </svg>
-                </div>
-                <h3 className="text-3xl font-bold text-gray-900">Vision</h3>
-              </div>
-              <p className="text-lg leading-relaxed text-gray-700 mb-8">
-                To create an equitable and sustainable society where environmental responsibility and 
-                inclusive growth go hand in hand, ensuring dignity, health, and opportunity for all.
-              </p>
-            </div>
-
-            {/* Mission Section */}
-            <div className="bg-white rounded-lg p-8 shadow-sm">
-              <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
-                  <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-                <h3 className="text-3xl font-bold text-gray-900">Mission</h3>
-              </div>
-              <p className="text-lg leading-relaxed text-gray-700">
-                To design and implement community-centric/driven models for sustainable waste 
-                management, impactful awareness generation, and skill-based livelihood development—
-                fostering long term environmental resilience and social empowerment.
-              </p>
-            </div>
-
-            {/* Strategic Focus Areas */}
-            <div className="bg-gray-50 rounded-lg p-8">
-              <h3 className="text-3xl font-bold text-center text-gray-900 mb-8">Strategic Focus Areas 2025 - 2030</h3>
-              {/* Show two focus cards per row on md+ screens */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-                
-                {/* Focus Area 1 */}
-                <div className="text-center">
-                  <div className="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl font-bold text-white">1</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-emerald-900/60 to-green-600/20"></div>
+              <div className="absolute inset-0 flex items-center justify-start">
+                <div className="w-full px-6 lg:px-16">
+                  <div className="max-w-5xl text-white text-left">
+                    <h2 className="text-5xl md:text-6xl font-bold leading-tight drop-shadow-lg">Our Vision</h2>
+                    <p className="mt-4 text-lg md:text-xl max-w-3xl opacity-95">Inspiring communities and youth to build sustainable, resilient, and equitable futures through education, innovation and grassroots action.</p>
                   </div>
-                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
-                    </svg>
-                  </div>
-                  <h4 className="text-lg font-bold text-gray-900 mb-3">Sustainable Waste Management & Resource Recovery</h4>
-                  <p className="text-sm text-gray-600 leading-relaxed">
-                    Establishing efficient waste segregation systems, operating RRR (Reduce, Reuse, Recycle) centres, 
-                    promoting plastic collection drives, and enabling local circular economy models in urban and rural areas.
-                  </p>
-                </div>
-
-                {/* Focus Area 2 */}
-                <div className="text-center">
-                  <div className="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl font-bold text-white">2</span>
-                  </div>
-                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z" />
-                    </svg>
-                  </div>
-                  <h4 className="text-lg font-bold text-gray-900 mb-3">Community Engagement & Environmental Education</h4>
-                  <p className="text-sm text-gray-600 leading-relaxed">
-                    Mobilizing youth, RWAs, and schools through cleanliness drives, anti-plastic campaigns, 
-                    plantation linked to waste-free zones, and promoting child education linked to environmental awareness.
-                  </p>
-                </div>
-
-                {/* Focus Area 3 */}
-                <div className="text-center">
-                  <div className="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl font-bold text-white">3</span>
-                  </div>
-                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
-                    </svg>
-                  </div>
-                  <h4 className="text-lg font-bold text-gray-900 mb-3">Livelihood Generation through Waste Economy</h4>
-                  <p className="text-sm text-gray-600 leading-relaxed">
-                    Creating income opportunities by engaging communities in waste segregation, tailoring units using 
-                    upcycled materials, SHG-led dry waste collection centres, and skill training for circular economy jobs.
-                  </p>
-                </div>
-
-                {/* Focus Area 4 */}
-                <div className="text-center">
-                  <div className="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl font-bold text-white">4</span>
-                  </div>
-                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                    </svg>
-                  </div>
-                  <h4 className="text-lg font-bold text-gray-900 mb-3">Governance & Policy Alignment for Waste Reforms</h4>
-                  <p className="text-sm text-gray-600 leading-relaxed">
-                    Promoting waste bylaws, BWG compliance, EPR execution, and decentralized systems through 
-                    ULBs, RRBs, SHGs, and citizen participation as per SBM-U, SBM-R and SWM Rules 2016.
-                  </p>
                 </div>
               </div>
             </div>
 
-            {/* Professions UI - placeholders for images that user will add later */}
-            <div className="bg-white rounded-lg p-8 shadow-sm">
-              <h4 className="text-2xl font-bold text-gray-900 mb-6">Professions</h4>
-              <p className="text-sm text-gray-600 mb-4">Add images for professions below. Placeholders are shown; replace `src` with actual images when ready.</p>
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-                {Array.from({ length: 8 }).map((_, idx) => (
-                  <div key={idx} className="text-center">
-                    <div className="bg-gray-50 rounded-lg overflow-hidden h-36 flex items-center justify-center mb-3">
-                      <img src={`/images/people/placeholder-${idx + 1}.png`} alt={`Profession ${idx + 1}`} className="object-cover h-full w-full opacity-60" />
+            {/* Main content area (almost full width but constrained for readability) */}
+            <div className="container mx-auto px-4">
+              <div className="max-w-7xl mx-auto space-y-10">
+                {/* Vision + Mission two-column */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                  <div>
+                    <h3 className="text-3xl font-bold text-gray-900 mb-4">Vision</h3>
+                    <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                      To create an equitable and sustainable society where environmental responsibility and inclusive growth go hand-in-hand, ensuring dignity, health and opportunity for all.
+                    </p>
+                    <h4 className="text-xl font-semibold text-gray-800 mb-3">Model of Action</h4>
+                    <p className="text-gray-700 mb-4">
+                      Our model of action is based on inspiration: we inspire children and youth to pursue purpose and practice empathy. We rely on the strength of volunteers and the energy of youth to catalyze systemic, organic change at the community level.
+                    </p>
+                    <div className="inline-flex items-center gap-3">
+                      <div className="px-4 py-2 bg-emerald-600 text-white rounded-full text-sm font-semibold">Community-driven</div>
+                      <div className="px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-medium">Education-first</div>
                     </div>
-                    <div className="text-sm font-medium text-gray-800">Profession {idx + 1}</div>
-                    <div className="text-xs text-gray-500">Role / short title</div>
                   </div>
-                ))}
+
+                  <div className="bg-white rounded-2xl shadow-lg overflow-hidden p-6">
+                    <h4 className="text-2xl font-bold text-gray-900 mb-4">Mission</h4>
+                    <p className="text-gray-700 leading-relaxed mb-6">
+                      To design and implement community-centric models for sustainable waste management, awareness generation and skill-based livelihood development — fostering long-term environmental resilience and social empowerment.
+                    </p>
+                    <div className="grid grid-cols-1 gap-3">
+                      <div className="flex items-start gap-4">
+                        <div className="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center text-green-700 font-bold">1</div>
+                        <div>
+                          <div className="font-semibold text-gray-800">Inspire & Mobilize</div>
+                          <div className="text-sm text-gray-600">Volunteers, schools and youth as core change agents</div>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-4">
+                        <div className="w-10 h-10 rounded-lg bg-emerald-100 flex items-center justify-center text-emerald-700 font-bold">2</div>
+                        <div>
+                          <div className="font-semibold text-gray-800">Implement & Scale</div>
+                          <div className="text-sm text-gray-600">Community programs, RRR centres and livelihood models</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Theory of Change / Transformation */}
+                <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl p-8 shadow-md">
+                  <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-center">
+                    <div className="lg:col-span-2">
+                      <h4 className="text-2xl font-bold text-gray-900 mb-4">Theory of Change</h4>
+                      <p className="text-gray-700 leading-relaxed mb-4">
+                        Our approach targets educational inequality by improving infrastructure, enabling modern teaching methods, and creating livelihoods linked to the circular economy. We aim to transform the lives of less privileged children and youth by maximizing measurable impact in the education sector.
+                      </p>
+                      <ul className="list-disc pl-5 text-gray-700 space-y-2">
+                        <li>Upgrade basic school infrastructure to improve attendance and learning outcomes.</li>
+                        <li>Introduce modern teaching-learning methods and teacher support systems.</li>
+                        <li>Create livelihood pathways via waste-to-value initiatives and SHG-led enterprises.</li>
+                      </ul>
+                    </div>
+                    <div className="bg-white rounded-xl p-4 shadow-sm flex items-center justify-center">
+                      {/* image slot - user can replace with their image */}
+                      <img src="/images/vision/vision(2).png" alt="Transformation" className="object-cover w-full h-40 rounded-md" />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Commitment / Three pillars displayed as cards */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <div className="bg-white rounded-2xl p-6 shadow hover:shadow-lg transition">
+                    <h5 className="font-bold text-lg text-gray-900 mb-2">Infrastructure Development</h5>
+                    <p className="text-gray-600 text-sm">Upgrading basic infrastructure facilities in schools to create safe and conducive learning environments.</p>
+                  </div>
+                  <div className="bg-white rounded-2xl p-6 shadow hover:shadow-lg transition">
+                    <h5 className="font-bold text-lg text-gray-900 mb-2">Modern Teaching Methods</h5>
+                    <p className="text-gray-600 text-sm">Providing access to modern pedagogies and tools to improve learning outcomes and teacher effectiveness.</p>
+                  </div>
+                  <div className="bg-white rounded-2xl p-6 shadow hover:shadow-lg transition">
+                    <h5 className="font-bold text-lg text-gray-900 mb-2">Compassionate Society</h5>
+                    <p className="text-gray-600 text-sm">Foster empathy and community engagement to create inclusive and supportive environments for children.</p>
+                  </div>
+                </div>
+
+                {/* Global challenges + SDG alignment compact */}
+                <div className="bg-white rounded-2xl p-6 shadow-md">
+                  <div className="flex items-start justify-between gap-6 flex-col md:flex-row">
+                    <div className="flex-1">
+                      <h4 className="text-xl font-bold text-gray-900 mb-3">Addressing Key Challenges</h4>
+                      <p className="text-gray-600">We focus on interconnected issues like hunger, poverty, gender discrimination, poor health, lack of clean water, sanitation, and educational inequality — aligning our work with the UN SDGs.</p>
+                    </div>
+                    <div className="w-44 flex-shrink-0">
+                      <div className="bg-emerald-600 text-white rounded-xl p-4 text-center">
+                        <div className="text-2xl font-bold">17</div>
+                        <div className="text-sm">UN SDGs</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Strategic Focus Areas: two per row */}
+                <div>
+                  <h3 className="text-3xl font-bold text-gray-900 mb-6">Strategic Focus Areas 2025 - 2030</h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {/* Pair 1 */}
+                    <div className="bg-white rounded-2xl p-6 shadow hover:shadow-xl transition flex items-start gap-4">
+                      <div className="flex-shrink-0 w-24 h-24 flex items-center justify-center rounded-full border-2 border-emerald-200 p-3 bg-emerald-50 shadow-sm overflow-hidden">
+                        <img src="/images/vision/icon1.png" alt="Sustainable Waste" className="w-20 h-20 object-contain rounded-md" />
+                      </div>
+                      <div>
+                        <h4 className="text-lg font-bold text-gray-900 mb-2">Sustainable Waste Management & Resource Recovery</h4>
+                        <p className="text-sm text-gray-600">Establish waste segregation systems, RRR centres and circular economy pilots across urban and rural geographies.</p>
+                      </div>
+                    </div>
+                    <div className="bg-white rounded-2xl p-6 shadow hover:shadow-xl transition flex items-start gap-4">
+                      <div className="flex-shrink-0 w-24 h-24 flex items-center justify-center rounded-full border-2 border-emerald-200 p-3 bg-emerald-50 shadow-sm overflow-hidden">
+                        <img src="/images/vision/icon2.png" alt="Community Engagement" className="w-20 h-20 object-contain rounded-md" />
+                      </div>
+                      <div>
+                        <h4 className="text-lg font-bold text-gray-900 mb-2">Community Engagement & Environmental Education</h4>
+                        <p className="text-sm text-gray-600">Mobilize youth, RWAs and schools for sustained behaviour change through campaigns and curriculum integration.</p>
+                      </div>
+                    </div>
+
+                    {/* Pair 2 */}
+                    <div className="bg-white rounded-2xl p-6 shadow hover:shadow-xl transition flex items-start gap-4">
+                      <div className="flex-shrink-0 w-24 h-24 flex items-center justify-center rounded-full border-2 border-emerald-200 p-3 bg-emerald-50 shadow-sm overflow-hidden">
+                        <img src="/images/vision/icon3.png" alt="Livelihood Generation" className="w-20 h-20 object-contain rounded-md" />
+                      </div>
+                      <div>
+                        <h4 className="text-lg font-bold text-gray-900 mb-2">Livelihood Generation through Waste Economy</h4>
+                        <p className="text-sm text-gray-600">Create income through upcycling, SHG-led collection centres and skill development for circular-economy jobs.</p>
+                      </div>
+                    </div>
+                    <div className="bg-white rounded-2xl p-6 shadow hover:shadow-xl transition flex items-start gap-4">
+                      <div className="flex-shrink-0 w-24 h-24 flex items-center justify-center rounded-full border-2 border-emerald-200 p-3 bg-emerald-50 shadow-sm overflow-hidden">
+                        <img src="/images/vision/icon4.png" alt="Governance & Policy" className="w-20 h-20 object-contain rounded-md" />
+                      </div>
+                      <div>
+                        <h4 className="text-lg font-bold text-gray-900 mb-2">Governance & Policy Alignment for Waste Reforms</h4>
+                        <p className="text-sm text-gray-600">Support local bylaws, BWG compliance and EPR execution with ULBs, SHGs and citizen participation.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -194,16 +300,22 @@ const About = () => {
       case "our-people":
         return (
           <div className="w-full">
-            {/* Hero Image Section */}
+            {/* Hero Image Section - match our-vision full-bleed hero */}
             <div className="relative w-full">
               <img
-                src="/images/3.jpg"
+                src="/images/people/people.jpg"
                 alt="Our People"
                 className="w-full h-96 object-cover"
               />
-              <div className="absolute inset-0 bg-black bg-opacity-30"></div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <h3 className="text-4xl font-bold text-white text-center">Team Members</h3>
+              <div className="absolute inset-0 bg-gradient-to-r from-emerald-900/80 to-green-700/40"></div>
+              <div className="absolute inset-0 bg-black/20"></div>
+              <div className="absolute inset-0 flex items-center justify-start">
+                <div className="w-full px-6 lg:px-16">
+                  <div className="max-w-5xl text-white text-left">
+                    <h2 className="text-5xl md:text-5xl font-bold leading-tight drop-shadow-lg">Meet Our Team </h2>
+                    <p className="mt-4 text-xl md:text-xl max-w-3xl opacity-95">Ordinary people with an extraordinary mission – to uplift lives and create lasting impact.</p>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -350,7 +462,7 @@ const About = () => {
               <div className="container mx-auto px-4">
                 <h4 className="text-4xl font-bold text-center text-gray-900 mb-16">Our Team</h4>
                 <div className="max-w-7xl mx-auto">
-                  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
                     {/* Team Member 1 */}
                     <div className="text-center">
                       <div className="bg-gray-50 rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition duration-300 mb-4">
