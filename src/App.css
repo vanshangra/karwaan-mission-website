@@ -1,0 +1,77 @@
+/* App-level utilities used by About page */
+body {
+	font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+.about-underline {
+	width: 56px;
+	height: 6px;
+	background: linear-gradient(90deg, #10B981, #047857);
+	border-radius: 6px;
+}
+
+/* Timeline visuals for About page */
+.timeline {
+	position: relative;
+	padding-left: 24px;
+	border-left: 2px solid rgba(16,185,129,0.12);
+	display: flex;
+	flex-direction: column;
+	gap: 18px;
+}
+.timeline-item {
+	position: relative;
+	display: flex;
+	gap: 12px;
+	align-items: flex-start;
+	opacity: 0;
+	transform: translateY(8px);
+	animation: fadeInUp 600ms ease forwards;
+}
+.timeline-item:nth-child(1) { animation-delay: 0ms; }
+.timeline-item:nth-child(2) { animation-delay: 120ms; }
+.timeline-item:nth-child(3) { animation-delay: 240ms; }
+.timeline-dot {
+	width: 14px;
+	height: 14px;
+	border-radius: 9999px;
+	background: linear-gradient(180deg,#10B981,#047857);
+	box-shadow: 0 4px 10px rgba(4,120,87,0.12);
+	margin-left: -28px;
+}
+.timeline-content {
+	background: transparent;
+}
+
+@keyframes fadeInUp {
+	to { opacity: 1; transform: translateY(0); }
+}
+
+/* Full-bleed hero helpers used on About page */
+.hero-overlay-strong {
+	background: linear-gradient(90deg, rgba(4,120,87,0.65), rgba(16,185,129,0.12));
+}
+
+.aside-stats {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+.aside-stats .stat-row {
+	display: flex;
+	justify-content: space-between;
+	gap: 12px;
+}
+
+/* Decorative underline used in the About page */
+.about-underline {
+	height: 3px;
+	background: linear-gradient(90deg, #0f766e 0%, rgba(15,118,110,0) 100%);
+	width: 180px;
+	border-radius: 4px;
+}
+
+.rounded-hero {
+	border-radius: 18px;
+}
+
