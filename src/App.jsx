@@ -10,6 +10,8 @@ import ComingSoon from "../components/comingsoon/comingsoon";
 import OurWork  from "../components/ourwork/ourwork";
 import ExploreMorePage from "../components/explore/explore";  
 import Contact from "../components/contact/contact";
+import Stories from "../components/stories/stories";
+import DonatePage from "../components/donate/donate";
 
 const App = () => {
   return (
@@ -34,10 +36,10 @@ const App = () => {
             {/* Other Pages */}
             <Route path="/about" element={<ComingSoon />} />
             <Route path="/work" element={<OurWork />} />
-            <Route path="/stories" element={<ComingSoon />} />
+            <Route path="/stories" element={<Stories />} />
             <Route path="/partners" element={<ComingSoon />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/donate" element={<ComingSoon />} />
+            <Route path="/donate" element={<DonatePage />} />
             <Route path="/explore-more" element={<ExploreMorePage />} />
           </Routes>
         </main>

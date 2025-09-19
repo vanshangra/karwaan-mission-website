@@ -55,7 +55,7 @@ const HeroSection = () => {
         {/* CTA Buttons */}
         <div className="flex justify-center gap-4 flex-wrap">
           <a
-            href="#donate"
+            href="/donate"
             className="bg-yellow-400 text-gray-900 px-8 py-4 rounded-full font-semibold text-lg shadow-lg 
             hover:bg-yellow-300 transition-transform duration-300 hover:scale-105"
           >

@@ -41,7 +41,7 @@ const Navbar = () => {
 
         {/* Donate Button */}
         <Link
-          to="/contact"
+          to="/donate"
           className="hidden md:block bg-emerald-900 text-white px-6 py-2 rounded-full font-semibold shadow-md hover:bg-emerald-700 transition duration-300"
         >
           Donate Now
@@ -81,7 +81,7 @@ const Navbar = () => {
       {/* Mobile Donate Button */}
       <div className="md:hidden px-4 py-2">
         <Link
-          to="/contact"
+          to="/donate"
           className="block w-full text-center bg-emerald-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-emerald-700"
         >
           Donate Now
