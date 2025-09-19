@@ -3,11 +3,12 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Navbar from "../components/navbar/navbar";
 import HeroSection from "../components/herosection/herosection";
-//import ImpactCounters from "../components/impactcounter/impactcounter";
+import ImpactCounters from "../components/impactcounter/impactcounter";
 import Footer from "../components/footer/footer";
-import PdfSlideshow from "../components/slideshow/slideshow";
+//import PdfSlideshow from "../components/slideshow/slideshow";
 import ComingSoon from "../components/comingsoon/comingsoon";
 import About from "../components/about/About";
+import Partner from "../components/partner/Partner";
 
 const App = () => {
   return (
@@ -22,7 +23,8 @@ const App = () => {
               element={
                 <>
                   <HeroSection />
-                  <PdfSlideshow />
+
+                  <ImpactCounters />
                   <div className="my-10"></div>
                 
                 </>
@@ -33,7 +35,7 @@ const App = () => {
             <Route path="/about" element={<About />} />
             <Route path="/work" element={<ComingSoon />} />
             <Route path="/stories" element={<ComingSoon />} />
-            <Route path="/partners" element={<ComingSoon />} />
+            <Route path="/partners" element={<Partner />} />
             <Route path="/contact" element={<ComingSoon />} />
             <Route path="/donate" element={<ComingSoon />} />
           </Routes>
